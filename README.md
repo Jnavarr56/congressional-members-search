@@ -2,11 +2,11 @@ Basic React/Express web app that stores info on all US congress members in a mon
 
 Each service needs a .env file with the following in it:
 
-DB_URL=mongodb://database:27017/YOUR_DB_NAME
-VOTESMART_API_KEY=YOUR_VOTE_SMART_API_KEY
-REACT_APP_BASE_API_URL=http://0.0.0.0:3000
-REACT_APP_STATES_ENDPOINT=states
-REACT_APP_OFFICIALS_ENDPOINT=officials
+DB_URL=mongodb://database:27017/YOUR_DB_NAME \
+VOTESMART_API_KEY=YOUR_VOTE_SMART_API_KEY \
+REACT_APP_BASE_API_URL=http://0.0.0.0:3000 \
+REACT_APP_STATES_ENDPOINT=states \
+REACT_APP_OFFICIALS_ENDPOINT=officials \
 
 ### Steps to Run
 
