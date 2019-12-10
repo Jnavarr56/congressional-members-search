@@ -6,10 +6,10 @@ services:
     image: mongo
     ports: 
       - '27017:27017'
-  api:
-    container_name: api
+  congressional-members-search-api:
+    container_name: congressional-members-search-api
     build:
-      context: ./api
+      context: ./congressional-members-search-api
       dockerfile: Dockerfile
     depends_on:
         - database
@@ -17,23 +17,23 @@ services:
         - database
     volumes:
         - '.:/app'
-        - '/app/api/node_modules'
+        - '/app/congressional-members-search-api/node_modules'
     ports:
       - '3000:3000'
     environment:
       - NODE_ENV=development
-  ui:
-    container_name: ui
+  congressional-members-search-ui:
+    container_name: congressional-members-search-ui
     build:
-      context: ./ui
+      context: ./congressional-members-search-ui
       dockerfile: Dockerfile
     depends_on:
-        - api
+        - congressional-members-search-api
     volumes:
       - '.:/app'
-      - '/app/ui/node_modules'
+      - '/app/congressional-members-search-ui/node_modules'
     ports:
-      - '8080:8080'
+      - '80:8080'
     environment:
       - NODE_ENV=development
 
