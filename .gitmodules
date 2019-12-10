@@ -1,0 +1,6 @@
+[submodule "congressional-members-search-api"]
+	path = congressional-members-search-api
+	url = git@github.com:Jnavarr56/congressional-members-search-api.git
+[submodule "congressional-members-search-ui"]
+	path = congressional-members-search-ui
+	url = git@github.com:Jnavarr56/congressional-members-search-ui.git
